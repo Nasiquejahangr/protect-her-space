@@ -1,12 +1,68 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { EmergencyButton } from "@/components/EmergencyButton";
+import { QuickAction } from "@/components/QuickAction";
+import { Phone, ShieldAlert, MapPin, Users } from "lucide-react";
 
 const Index = () => {
+  const handleEmergency = () => {
+    // TODO: Implement emergency action
+    console.log("Emergency button pressed");
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen w-full py-8 px-4 md:px-8">
+      <header className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
+          Your Safety Companion
+        </h1>
+        <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto text-balance">
+          Quick access to emergency services and support when you need them most
+        </p>
+      </header>
+
+      <main>
+        <div className="flex flex-col items-center gap-12">
+          {/* Emergency Button Section */}
+          <section className="text-center">
+            <EmergencyButton onClick={handleEmergency} />
+            <p className="mt-4 text-sm text-muted-foreground">
+              Press for immediate emergency assistance
+            </p>
+          </section>
+
+          {/* Quick Actions Grid */}
+          <section className="w-full max-w-4xl mx-auto">
+            <h2 className="text-2xl font-semibold mb-6 text-center">Quick Actions</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <QuickAction
+                icon={Phone}
+                label="Emergency Contacts"
+                onClick={() => console.log("Emergency contacts")}
+              />
+              <QuickAction
+                icon={ShieldAlert}
+                label="Safety Tips"
+                onClick={() => console.log("Safety tips")}
+              />
+              <QuickAction
+                icon={MapPin}
+                label="Share Location"
+                onClick={() => console.log("Share location")}
+              />
+              <QuickAction
+                icon={Users}
+                label="Support Network"
+                onClick={() => console.log("Support network")}
+              />
+            </div>
+          </section>
+        </div>
+      </main>
+
+      {/* Trust Indicators */}
+      <footer className="mt-16 text-center text-sm text-muted-foreground">
+        <p>Your safety is our priority. All data is encrypted and secure.</p>
+      </footer>
     </div>
   );
 };
