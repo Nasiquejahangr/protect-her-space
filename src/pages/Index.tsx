@@ -10,7 +10,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen w-full py-8 px-4 md:px-8">
+    <div className="w-full py-12 px-4 md:px-8">
       <header className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
           Your Safety Companion
@@ -58,11 +58,6 @@ const Index = () => {
           </section>
         </div>
       </main>
-
-      {/* Trust Indicators */}
-      <footer className="mt-16 text-center text-sm text-muted-foreground">
-        <p>Your safety is our priority. All data is encrypted and secure.</p>
-      </footer>
     </div>
   );
 };
