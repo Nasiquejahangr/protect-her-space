@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Shield, Heart, Users, Phone } from "lucide-react";
+import { Shield, Heart, Users, Phone, Mail } from "lucide-react";
 
 const About = () => {
   return (
@@ -64,15 +64,25 @@ const About = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="max-w-2xl mx-auto text-center">
-        <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
-        <p className="text-muted-foreground mb-6">
+      <section className="max-w-2xl mx-auto">
+        <h2 className="text-2xl font-semibold mb-4 text-center">Get in Touch</h2>
+        <p className="text-muted-foreground mb-6 text-center">
           Have questions or need support? Our team is here to help you 24/7.
         </p>
-        <Button size="lg" className="gap-2">
-          <Phone className="h-4 w-4" />
-          Contact Us
-        </Button>
+        <div className="space-y-4">
+          <div className="flex items-center justify-center gap-2">
+            <Phone className="h-5 w-5 text-primary" />
+            <a href="tel:9508904653" className="text-lg hover:text-primary transition-colors">
+              +91 950 890 4653
+            </a>
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <Mail className="h-5 w-5 text-primary" />
+            <a href="mailto:nasiquejahangir000@gmail.com" className="text-lg hover:text-primary transition-colors">
+              nasiquejahangir000@gmail.com
+            </a>
+          </div>
+        </div>
       </section>
     </div>
   );
